@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Creating a Timeshift snapshot before pacman transaction.
+When = PreTransaction
+Exec = /usr/bin/timeshift --create --comments "Pre-pacman snapshot"
+Depends = timeshift

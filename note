@@ -1,0 +1,1 @@
+timeshift-pre-pacman.hook goes in /etc/pacman.d/hooks/
