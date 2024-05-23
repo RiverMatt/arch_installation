@@ -13,7 +13,6 @@ alsa-lib
 alsa-plugins
 alsa-topology-conf
 alsa-ucm-conf
-amd-ucode
 amdvlk
 aom
 appstream
