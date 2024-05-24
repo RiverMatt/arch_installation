@@ -308,7 +308,8 @@
         "spectacle",
         "wget",
         "linux-headers",
-        "micro"
+        "micro",
+	"openssh"
     ],
     "parallel downloads": 0,
     "profile_config": {
