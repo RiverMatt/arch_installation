@@ -5,9 +5,10 @@ After installing, the default ESP mount point will be `/boot`. We don't want tha
 1. Delete everything in `/boot`
 2. Unmount `/boot`
 3. `# pacman -Sy linux` include any other kernels here.
-4. `# mkdir /boot/efi`
-5. Edit `/etc/fstab` to mount the ESP at `/boot/efi`
-6. `# systemctl daemon-reload`
-7. Mount the ESP `# mount /dev/nvme0n1p1 /boot/efi`
-8. Reinstall grub with: `# grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub`
-9. Generate the new grub config with: `# grub-mkconfig -o /boot/grub/grub.cfg`
+4. Install either `amd-ucode` or `intel-ucode`.
+5. `# mkdir /boot/efi`
+6. Edit `/etc/fstab` to mount the ESP at `/boot/efi`
+7. `# systemctl daemon-reload`
+8. Mount the ESP `# mount /dev/nvme0n1p1 /boot/efi`
+9. Reinstall grub with: `# grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub`
+10. Generate the new grub config with: `# grub-mkconfig -o /boot/grub/grub.cfg`
