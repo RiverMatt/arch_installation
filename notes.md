@@ -4,7 +4,7 @@ After installing, the default ESP mount point will be `/boot`. We don't want tha
 
 1. Delete everything in `/boot`
 2. Unmount `/boot`
-3. `# pacman -Sy linux linux-headers` include any other kernels here.
+3. `# pacman -Sy linux` include any other kernels here.
 4. `# mkdir /boot/efi`
 5. Edit `/etc/fstab` to mount the ESP at `/boot/efi`
 6. `# systemctl daemon-reload`
