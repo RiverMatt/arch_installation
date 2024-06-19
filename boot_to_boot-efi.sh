@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "\n\nClearing /boot/..."
 rm -rf /boot/*
 
@@ -6,6 +8,17 @@ umount /boot
 
 echo "\n\nInstalling linux kernel and generating images..."
 pacman -Sy linux
+
+echo "\n\nDetermining system details..."
+if grep -q 'GenuineIntel' /proc/cpuinfo; then
+    echo "The system is running on an Intel processor. Installing intel-ucode..."
+	pacman -Sy intel-ucode
+elif grep -q 'AuthenticAMD' /proc/cpuinfo; then
+    echo "The system is running on an AMD processor. Installing amd-ucode..."
+	pacman -Sy amd-ucode
+else
+    echo "The system's processor is neither Intel nor AMD."
+fi
 
 echo "\n\nMounting /boot/efi..."
 mkdir /boot/efi
