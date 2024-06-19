@@ -11,3 +11,6 @@ mount /dev/nvme0n1p1 /mnt/boot
 mount --bind /dev /mnt/dev
 mount --bind /proc /mnt/proc
 mount --bind /sys /mnt/sys
+
+echo "Subvolumes mounted, chrooting..."
+arch-chroot /mnt
