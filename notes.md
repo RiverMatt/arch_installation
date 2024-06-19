@@ -1,4 +1,4 @@
-timeshift-pre-pacman.hook goes in /etc/pacman.d/hooks/
+`timeshift-pre-pacman.hook` goes in `/etc/pacman.d/hooks/`
 
 After installing, the default ESP mount point will be `/boot`. We don't want that, because BTRFS will not see the kernel images and that causes problems later. Here's how to move the ESP to `/boot/efi` and store your kernel images in `/boot`
 
