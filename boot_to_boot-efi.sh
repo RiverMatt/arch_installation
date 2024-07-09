@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Check for an internet connection
+echo -e "\nChecking for an internet connection before starting..."
+if ping -c 1 -W 5 8.8.8.8 > /dev/null 2>&1; then
+    echo "Internet connection confirmed, continuing..."
+else
+    echo "No internet connection found, exiting."
+	exit 1
+fi
+
 read -p "Please enter the desired ESP directory (default /boot/efi/): " ESP_RAW
 if [ -z "$ESP_RAW" ]; then
     ESP="/boot/efi"
