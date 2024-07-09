@@ -14,6 +14,7 @@ echo -e "\n\nUnmounting /boot/..."
 umount /boot
 
 # Ask if the user wants any additional kernels
+echo -e "\n\n"
 read -p "Please enter any additional linux kernels you would like to install, separated by a space: " KERNELS
 if [ -z "$KERNELS" ]; then
     echo -e "\n\nInstalling linux kernel and generating images..."
