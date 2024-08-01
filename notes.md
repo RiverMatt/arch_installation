@@ -4,8 +4,7 @@ Enable `cronie`
 
 Comment out sudoers file option and uncomment `wheel`
 
-`echo "127.0.0.1 $(hostname)" | tee -a /etc/hosts` 
-*add `sudo` in front of `tee` if not run as root*
+`echo "127.0.0.1 $(hostname)" | tee -a /etc/hosts` *add `sudo` in front of `tee` if not run as root*
 
 After installing, the default ESP mount point will be `/boot`. We don't want that, because BTRFS will not see the kernel images and that causes problems later. Here's how to move the ESP to `/boot/efi` and store your kernel images in `/boot`
 
