@@ -310,7 +310,9 @@
         "linux-headers",
         "micro",
 	"openssh",
-	"inxi"
+	"inxi",
+	"inetutils",
+	"gamescope"
     ],
     "parallel downloads": 0,
     "profile_config": {
